@@ -15,7 +15,7 @@ class $modify(MenuLayer) {
 
 		if (!ListManager::firstTimeOpen) {
 			web::AsyncWebRequest()
-			.fetch("https://pgdl.pages.dev/#/")
+			.fetch("https://pgdl.pages.dev/api/")
 			.text()
 			.then([](std::string const& str) {
 				ListManager::parseRequestString(str);
